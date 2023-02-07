@@ -11,7 +11,8 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy
       - uses: actions/checkout@v3
-      - run: echo "Branch name is $GITHUB_REF_NAME or $GITHUB_REF"
+
+      - name: show_branch_name
+        run: echo "Branch name is $GITHUB_REF_NAME or $GITHUB_REF"
       
