@@ -4,6 +4,8 @@ run-name: Deploying the app...
 
 on:
   workflow_dispatch:
+    branches:
+      - release/*
     inputs:
       environment:
         description: 'Environment to run this deployment against'
