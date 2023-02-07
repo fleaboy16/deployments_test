@@ -5,7 +5,8 @@ run-name: Deploying the app to dev...
 on:
   workflow_dispatch:
     tags:
-      - *.*.*
+      - 1.*
+      - 2.*
 
 jobs:
   deployment:
