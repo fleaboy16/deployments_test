@@ -4,7 +4,7 @@ run-name: This is the test run-name
 
 on:
   pull_request:
-    types: [opened, reopened, edited]
+    types: [opened, reopened, synchronize]
 
 jobs:
   deployment:
