@@ -1,0 +1,20 @@
+name: Deploys the app
+
+run-name: Deploying the app...
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run this deployment against'
+        type: environment
+        required: true
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: show_branch_name
+        run: echo "Branch name is $GITHUB_REF_NAME or $GITHUB_REF"
