@@ -1,0 +1,19 @@
+name: Deploys the app to prod
+
+run-name: Deploying the app to prod...
+
+on:
+  workflow_dispatch:
+    branches:
+      - release/*
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: show_branch_name
+        run: echo "Branch name is $GITHUB_REF_NAME or $GITHUB_REF"
